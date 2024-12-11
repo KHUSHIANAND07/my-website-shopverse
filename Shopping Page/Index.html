@@ -1,0 +1,308 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopVerse - E-commerce Page</title>
+    <link rel="stylesheet" href="Style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    </head>
+  <body>
+    <!-- Header Section -->
+    <header class="header">
+      <div class="logo">
+        <img src="image copy/Logo1.png" alt="logo">
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="search-cart">
+        <input type="text" id="search-bar" placeholder="Search for products...">
+        <button id="search-btn">🔍 Search</button>
+        <a href="#cart" class="cart-icon">🛒 Cart</a>
+      </div>
+    </header>
+    <!-- Banner Section -->
+    <div class="banner">
+      <h1>Welcome to you and me shopping</h1>
+      <a href="https://www.flipkart.com" target="_blank" rel="noopener">Buy now</a>
+    </div>
+  </body>
+  </html>
+  <div class="filter-container">
+    <div class="filter-item">
+      <label for="price-range">Price Range:</label>
+      <input type="range" id="price-range" min="0" max="1000" step="10" value="500">
+      <span id="price-value">500</span>
+    </div>
+
+    <div class="filter-item">
+      <label for="quality">Quality:</label>
+      <select id="quality">
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+      </select>
+    </div>
+
+    <div class="filter-item">
+      <label>Gender:</label>
+      <div class="radio-group">
+        <input type="radio" id="man" name="gender" value="male">
+        <label for="man">Man</label>
+        <input type="radio" id="woman" name="gender" value="Female">
+        <label for="woman">Woman</label>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Update price range value dynamically
+    const priceRange = document.getElementById('price-range');
+    const priceValue = document.getElementById('price-value');
+    priceRange.addEventListener('input', () => {
+      priceValue.textContent = priceRange.value;
+    });
+  </script>
+
+    <!-- Categories Section -->
+    <section id="categories" class="categories">
+      <h2>Shop by Category</h2>
+      <div class="category-grid">
+        <div class="category-card">
+          <img src="image copy/cloths copy.jpeg" alt="Dresses">
+          <h3>Shirts</h3>
+        </div>
+        <div class="category-card">
+          <img src="image copy/Laptop copy.jpeg" alt="Laptops">
+          <h3>Laptops</h3>
+        </div>
+        <div class="category-card">
+          <img src="image copy/phone copy.jpeg" alt="Phones">
+          <h3>Phones</h3>
+        </div>
+        <div class="category-card">
+          <img src="image copy/Shoes copy.jpeg" alt="Shoes">
+          <h3>Shoes</h3>
+        </div>
+        <div class="category-card">
+          <img src="image copy/Accesories copy.jpeg" alt="Accessories">
+          <h3>Accessories</h3>
+        </div>
+        <div class="category-card">
+          <img src="image copy/Watch copy.jpeg" alt="Watches">
+          <h3>Watches</h3>
+        </div>
+        <div class="category-card">
+          <img src="image copy/Bagpack copy.jpeg" alt="Bags">
+          <h3>Bags</h3>
+        </div>
+        <div class="category-card">
+          <img src="image copy/Home appliances copy.jpeg" alt="Home Appliances">
+          <h3>Home Appliances</h3>
+        </div>
+        <div class="category-card">
+          <img src="image copy/Sports copy.jpeg" alt="Sports">
+          <h3>Sports</h3>
+        </div>
+        <div class="category-card">
+          <img src="image copy/Toys copy.jpeg" alt="Toys">
+          <h3>Toys</h3>
+        </div>
+      </div>
+    </section> 
+    <!-- Products Section -->
+    <section id="products" class="products">
+      <h2>Our Products</h2>
+      <div class="product-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+          <img src="image copy/Shirt copy.jpeg" alt="Product 1">
+          <h3>Stylish Shirt</h3>
+          <p>Price: ₹799</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Product 2 -->
+        <div class="product-card">
+          <img src="image copy/Gaming laptop copy.jpeg" alt="Product 2">
+          <h3>Gaming Laptop</h3>
+          <p>Price: ₹59,999</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Product 3 -->
+        <div class="product-card">
+          <img src="image copy/phone copy.jpeg" alt="Product 3">
+          <h3>Smartphone</h3>
+          <p>Price: ₹15,499</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Product 4 -->
+        <div class="product-card">
+          <img src="image copy/Hand watch copy.jpeg" alt="Product 4">
+          <h3>Smartwatch</h3>
+          <p>Price: ₹5,499</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Product 5 -->
+        <div class="product-card">
+          <img src="image copy/Running shoe copy.jpeg" alt="Product 5">
+          <h3>Running Shoes</h3>
+          <p>Price: ₹2,499</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Product 6 -->
+        <div class="product-card">
+          <img src="image copy/Bagpack copy.jpeg" alt="Product 6">
+          <h3>Backpack</h3>
+          <p>Price: ₹1,099</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Product 7 -->
+        <div class="product-card">
+          <img src="image copy/Frock copy.jpeg" alt="Product 7">
+          <h3>Frock</h3>
+          <p>Price: ₹1,899</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Product 8 -->
+        <div class="product-card">
+          <img src="image copy/Ear burd copy.jpeg" alt="Product 8">
+          <h3>Wireless Earbuds</h3>
+          <p>Price: ₹1,499</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Product 9 -->
+        <div class="product-card">
+          <img src="image copy/Gown.jpeg" alt="Product 9">
+          <h3>Gown</h3>
+          <p>Price: ₹2,999</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Product 10 -->
+        <div class="product-card">
+          <img src="image copy/Degital camera copy.jpeg" alt="Product 10">
+          <h3>Digital Camera</h3>
+          <p>Price: ₹12,999</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Product 11 -->
+        <div class="product-card">
+          <img src="image copy/Action camera copy.jpeg" alt="Product 11">
+          <h3>Action Camera</h3>
+          <p>Price: ₹8,499</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Product 12 -->
+        <div class="product-card">
+          <img src="image copy/Puffy Blanket with pillow copy.jpeg" alt="Product 12">
+          <h3>Puffy blanket With pillow</h3>
+          <p>Price: ₹3,499</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Product 13 -->
+        <div class="product-card">
+          <img src="image copy/Yoga mat copy.jpeg" alt="Product 13">
+          <h3>Yoga Mat</h3>
+          <p>Price: ₹799</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Product 14 -->
+        <div class="product-card">
+          <img src="image copy/Baby wrap Blanket copy.jpeg" alt="Product 14">
+          <h3>Baby wrap</h3>
+          <p>Price: ₹1,499</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Product 15 -->
+        <div class="product-card">
+          <img src="image copy/Moving chair copy.jpeg" alt="Product 15">
+          <h3>Office Chair</h3>
+          <p>Price: ₹5,999</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Product 16 -->
+        <div class="product-card">
+          <img src="image copy/Table lamp copy.jpeg" alt="Product 16">
+          <h3>Table Lamp</h3>
+          <p>Price: ₹899</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Product 17 -->
+        <div class="product-card">
+          <img src="image copy/Blanket copy.jpeg" alt="Product 17">
+          <h3>Blanket</h3>
+          <p>Price: ₹1,299</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Product 18 -->
+        <div class="product-card">
+          <img src="image copy/Kitchen set copy.jpeg" alt="Product 18">
+          <h3>Kitchen Set</h3>
+          <p>Price: ₹2,499</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Product 19 -->
+        <div class="product-card">
+          <img src="image copy/Smart bulb copy.jpeg" alt="Product 19">
+          <h3>Smart Bulbs</h3>
+          <p>Price: ₹799</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Product 20 -->
+        <div class="product-card">
+          <img src="image copy/cooking set copy.jpeg" alt="Product 20">
+          <h3>Cooking Set</h3>
+          <p>Price: ₹3,999</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <h2>About Us</h2>
+      <p>At You and Me, we are dedicated to providing you with the best shopping experience. Whether you're looking for the latest gadgets, trendy apparel, or everyday essentials, we’ve got you covered! With an ever-expanding product range and unbeatable prices, we ensure every product meets your needs and exceeds your expectations. Join us on this exciting shopping journey!</p>
+    </section>
+    <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Contact Details:</p>
+      <p>Name: Khushi Anand</p>
+      <p>Email: <a href="mailto:khushi24@navgurukul.org">khushi24@navgurukul.org</a></p>
+      <p>Location: Kishanganj, Bihar, India</p>
+    <p>Have questions, feedback, or need assistance? We'd love to hear from you!</p>
+    <form action="https://formspree.io/f/xrbgrnaw" method="POST" class="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </section>
+  <div class="social-icons">
+    <a href="fb://profile" target="_blank" onclick="window.location='https://www.facebook.com'"><i class="fab fa-facebook-f"></i>Facebook</a>
+    <a href="twitter://user?screen_name=twitter" target="_blank" onclick="window.location='https://www.twitter.com'"><i class="fab fa-twitter"></i>Twitter</a>
+    <a href="instagram://user?username=instagram" target="_blank" onclick="window.location='https://www.instagram.com'"><i class="fab fa-instagram"></i>Instagram</a>
+    <a href="linkedin://profile" target="_blank" onclick="window.location='https://www.linkedin.com'"><i class="fab fa-linkedin-in"></i>LinkedIn</a>
+  </div>
+    <!-- Footer Section -->
+    <footer class="footer"><b>
+      <p>🛍️ Thank you for shopping with us! 💖</p>
+      <p>🚚 Fast delivery, great deals! 🎉</p>
+      <p>📞 Need help? Contact our customer support! 🤝</p>
+      <p>🔒 Your privacy is our priority! 🛡️</p>
+      <p>© 2024 You and Me Shopping. All Rights Reserved. 🌐</p></b>
+      </div>
+    </footer>
+  </body>
+  </html>
